@@ -1,4 +1,4 @@
-#  SecureAware — Bộ Công Cụ Giáo Dục An Toàn Thông Tin
+#  SecureAware
 
 <div align="center">
 
