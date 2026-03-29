@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bộ Công Cụ Giáo Dục An Toàn Thông Tin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- Header -->
+<div class="header">
+  <div class="logo">🛡️</div>
+  <div>
+    <div class="header-title">SecureAware</div>
+    <div class="header-sub">Bộ Công Cụ Giáo Dục An Toàn Thông Tin</div>
+  </div>
+  <div class="badge">🎓 Demo </div>
+</div>
+
+<!-- Nav -->
+<div class="nav">
+  <button class="nav-btn active" onclick="showTab('home')" data-tab="home">
+    <span class="nav-icon">🏠</span> Tổng Quan
+  </button>
+  <button class="nav-btn" onclick="showTab('footprint')" data-tab="footprint">
+    <span class="nav-icon">🌐</span> Digital Footprint
+  </button>
+  <button class="nav-btn" onclick="showTab('phishing')" data-tab="phishing">
+    <span class="nav-icon">🎣</span> Phishing Simulator
+  </button>
+  <button class="nav-btn" onclick="showTab('password')" data-tab="password">
+    <span class="nav-icon">🔐</span> Password Analyzer
+  </button>
+  <button class="nav-btn" onclick="showTab('rsa')" data-tab="rsa">
+    <span class="nav-icon">🔢</span> RSA Demo
+  </button>
+</div>
+
+<!-- ══════════════════ TAB: HOME ══════════════════ -->
+<div class="content active" id="tab-home">
+  <div class="section-header">
+    <div class="section-title">🛡️ Human-Centric Security Engineering</div>
+    <div class="section-desc">Theme: Bộ công cụ mô phỏng và giáo dục về mối nguy hiểm của dấu chân kỹ thuật số và các chiến thuật social engineering.</div>
+  </div>
+
+
+  <div class="grid-3" style="margin-bottom: 24px;">
+    <div class="stat-card">
+      <div class="stat-num" style="color: var(--accent2);">91%</div>
+      <div class="stat-label">Tấn công bắt đầu từ Phishing Email</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" style="color: var(--accent3);">3.4B</div>
+      <div class="stat-label">Email lừa đảo được gửi mỗi ngày</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" style="color: var(--success);">4</div>
+      <div class="stat-label">Module giáo dục trong bộ này</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">📋 Các Module</div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot" style="background: var(--accent);">1</div>
+          <div class="tl-content">
+            <div class="tl-label">MODULE 1 — DIGITAL FOOTPRINT</div>
+            <div class="tl-text">Mô phỏng cách kẻ tấn công thu thập thông tin OSINT từ email của bạn. Trực quan hóa dữ liệu bị lộ trên internet.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background: var(--accent2);">2</div>
+          <div class="tl-content">
+            <div class="tl-label">MODULE 2 — PHISHING SIMULATOR</div>
+            <div class="tl-text">Tương tác với email lừa đảo, SMS smishing và trang web giả. Học nhận diện dấu hiệu đáng ngờ.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background: var(--accent3);">3</div>
+          <div class="tl-content">
+            <div class="tl-label">MODULE 3 — PASSWORD ANALYZER</div>
+            <div class="tl-text">Phân tích độ mạnh mật khẩu, entropy, kiểm tra dữ liệu rò rỉ và đưa ra gợi ý cải thiện.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background: var(--accent4);">4</div>
+          <div class="tl-content">
+            <div class="tl-label">MODULE 4 — RSA CRYPTOGRAPHY DEMO</div>
+            <div class="tl-text">Minh họa thuật toán RSA từ tài liệu thực hành số 16 — sinh khóa, mã hóa và giải mã trực tiếp.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">⚔️ Vector Tấn Công Phổ Biến</div>
+      <table>
+        <tr><th>Loại</th><th>Tỷ lệ</th><th>Rủi ro</th></tr>
+        <tr>
+          <td>Email Phishing</td>
+          <td><div class="progress-wrap"><div class="progress-bar" style="width:85%; background: linear-gradient(90deg, #ef4444, #dc2626);"></div></div></td>
+          <td><span class="chip chip-danger">Rất cao</span></td>
+        </tr>
+        <tr>
+          <td>SMS Smishing</td>
+          <td><div class="progress-wrap"><div class="progress-bar" style="width:65%; background: linear-gradient(90deg, #f59e0b, #d97706);"></div></div></td>
+          <td><span class="chip chip-warning">Cao</span></td>
+        </tr>
+        <tr>
+          <td>Fake Login Page</td>
+          <td><div class="progress-wrap"><div class="progress-bar" style="width:72%; background: linear-gradient(90deg, #ef4444, #f59e0b);"></div></div></td>
+          <td><span class="chip chip-danger">Rất cao</span></td>
+        </tr>
+        <tr>
+          <td>Mật khẩu yếu</td>
+          <td><div class="progress-wrap"><div class="progress-bar" style="width:78%; background: linear-gradient(90deg, #f59e0b, #d97706);"></div></div></td>
+          <td><span class="chip chip-warning">Cao</span></td>
+        </tr>
+        <tr>
+          <td>OSINT Exposure</td>
+          <td><div class="progress-wrap"><div class="progress-bar" style="width:90%; background: linear-gradient(90deg, #ef4444, #dc2626);"></div></div></td>
+          <td><span class="chip chip-danger">Nguy hiểm</span></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔗 Liên Kết Với Tài Liệu Thực Hành Số 16</div>
+    <div style="font-size: 14px; line-height: 1.7; color: var(--text-muted);">
+      Nhóm em đã kết hợp kiến thức từ Bài 16 — Lập trình thuật toán mật mã học về RSA với thực tiễn trong lĩnh vực an toàn thông tin. Thuật toán RSA hiện được sử dụng trong giao thức HTTPS nhằm bảo vệ thông tin đăng nhập của người dùng. Tuy nhiên, đây cũng là mục tiêu mà các trang web phishing giả mạo khai thác để đánh cắp dữ liệu.
+
+Module RSA Demo của nhóm em được xây dựng nhằm minh họa trực quan quá trình sinh khóa, mã hóa và giải mã, tương tự như nội dung đã thực hành trong bài học.
+    </div>
+    <div style="margin-top: 12px;">
+      <span class="tag">RSA</span>
+      <span class="tag">Mã hóa bất đối xứng</span>
+      <span class="tag">Public/Private Key</span>
+      <span class="tag">OSINT</span>
+      <span class="tag">Social Engineering</span>
+      <span class="tag">Password Security</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ TAB: FOOTPRINT ══════════════════ -->
+<div class="content" id="tab-footprint">
+  <div class="section-header">
+    <div class="section-title">🌐 Digital Footprint Visualizer</div>
+    <div class="section-desc">Nhập email để xem mô phỏng cách kẻ tấn công thu thập thông tin OSINT về bạn từ các nguồn công khai trên internet.</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">🔍 Quét Dấu Chân Kỹ Thuật Số</div>
+      <div class="input-group">
+        <label class="input-label">Địa chỉ Email</label>
+        <input type="email" id="fp-email" class="input-field" placeholder="example@email.com" value="">
+      </div>
+      <button class="btn" onclick="runFootprintScan()" style="width: 100%;">
+        🔎 Phân Tích Dấu Chân
+      </button>
+
+      <div id="fp-scanning" style="display:none; margin-top: 16px;">
+        <div class="alert alert-info" id="fp-status">⚙️ Đang quét HaveIBeenPwned...</div>
+        <div style="margin-top: 8px;">
+          <div class="input-label" id="fp-progress-label">Quét nguồn: 0/6</div>
+          <div class="progress-wrap"><div class="progress-bar" id="fp-progress-bar" style="width: 0%; background: linear-gradient(90deg, var(--accent), #3b82f6);"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📊 Mức Độ Phơi Lộ</div>
+      <div style="display: flex; gap: 16px; align-items: center;">
+        <div class="score-ring">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="10"/>
+            <circle id="fp-ring" cx="60" cy="60" r="50" fill="none" stroke="url(#ringGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="0 314"/>
+            <defs>
+              <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#4ade80"/>
+                <stop offset="50%" stop-color="#fbbf24"/>
+                <stop offset="100%" stop-color="#ef4444"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="score-text">
+            <div style="font-size: 28px; font-weight: 700; font-family: var(--mono);" id="fp-score">0</div>
+            <div style="font-size: 10px; color: var(--text-muted);">/ 100</div>
+          </div>
+        </div>
+        <div style="flex: 1;">
+          <div id="fp-risk-label" style="font-size: 18px; font-weight: 700; color: var(--text-muted);">Chưa quét</div>
+          <div id="fp-risk-desc" style="font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.5;">Nhập email và bấm phân tích để xem kết quả</div>
+        </div>
+      </div>
+      <div class="risk-meter" style="margin-top: 16px;">
+        <div class="risk-needle" id="fp-needle" style="left: 0%;"></div>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-size: 10px; color: var(--text-muted); font-family: var(--mono);">
+        <span>AN TOÀN</span><span>RỦI RO</span><span>NGUY HIỂM</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="fp-results" style="display: none;">
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">💥 Dữ Liệu Bị Lộ (Mô Phỏng)</div>
+        <div id="fp-breaches"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">🕸️ Bản Đồ Mối Liên Kết OSINT</div>
+        <div class="footprint-graph" id="fp-graph">
+          <div class="fp-center" id="fp-center-node">EMAIL</div>
+          <!-- nodes generated by JS -->
+        </div>
+        <div id="fp-node-tooltip" class="tooltip-box"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🤖 Hồ Sơ Kẻ Tấn Công Có Thể Thu Thập</div>
+      <div id="fp-attacker-profile"></div>
+    </div>
+
+    <div class="alert alert-warning">
+      ⚠️ <strong>Lưu ý giáo dục:</strong> Trong thực tế, kẻ tấn công dùng các công cụ như <code>theHarvester</code>, <code>Maltego</code>, <code>Shodan</code> và <code>HaveIBeenPwned API</code> để thu thập thông tin này. Kết quả trên là mô phỏng để minh họa mức độ nguy hiểm.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ TAB: PHISHING ══════════════════ -->
+<div class="content" id="tab-phishing">
+  <div class="section-header">
+    <div class="section-title">🎣 Phishing & Social Engineering Simulator</div>
+    <div class="section-desc">Tương tác với các mô phỏng tấn công thực tế. Hệ thống sẽ theo dõi hành vi và cung cấp phân tích chi tiết.</div>
+  </div>
+
+  <div style="margin-bottom: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+    <button class="btn" onclick="showScenario('email')" id="sc-btn-email">📧 Email Phishing</button>
+    <button class="btn btn-outline" onclick="showScenario('sms')" id="sc-btn-sms">📱 SMS Smishing</button>
+    <button class="btn btn-outline" onclick="showScenario('login')" id="sc-btn-login">🌐 Fake Login Page</button>
+  </div>
+
+  <!-- Score -->
+  <div class="card" style="padding: 16px 24px; margin-bottom: 20px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <div>
+        <div style="font-size: 12px; color: var(--text-muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.5px;">Điểm Nhận Thức Bảo Mật</div>
+        <div style="display: flex; align-items: baseline; gap: 8px; margin-top: 4px;">
+          <div id="phishing-score-display">100</div>
+          <div style="font-size: 14px; color: var(--text-muted);">/ 100</div>
+        </div>
+      </div>
+      <div id="phishing-status-badge" class="chip chip-success" style="font-size: 13px; padding: 8px 16px;">✅ An Toàn</div>
+    </div>
+    <div class="progress-wrap" style="margin-top: 12px;">
+      <div class="progress-bar" id="phishing-score-bar" style="width: 100%; background: linear-gradient(90deg, #22c55e, #16a34a);"></div>
+    </div>
+  </div>
+
+  <!-- Scenario: Email -->
+  <div id="scenario-email">
+    <div class="alert alert-info">📧 <strong>Tình huống:</strong> Bạn vừa nhận được email này. Đọc kỹ và quyết định hành động.</div>
+    <div class="email-client">
+      <div class="email-header">
+        <div style="font-size: 18px;">📬</div>
+        <div>
+          <div class="email-from">Từ: <span class="suspicious" onclick="flagCaught('domain')" title="Kiểm tra địa chỉ gửi">security@<b>vietcombank-alert.net</b></span> &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d7372306f786d71645d6b7478697e72707f7c7376307c71786f6933737869">[email&#160;protected]</a>&gt;</div>
+          <div class="email-subject">⚠️ KHẨN: Tài khoản của bạn sẽ bị khóa trong 24 giờ!</div>
+          <div class="email-from">23/05/2025 09:14</div>
+        </div>
+      </div>
+      <div class="email-body">
+        <p>Kính gửi Quý khách hàng,</p><br>
+        <p>Chúng tôi phát hiện <span class="suspicious" onclick="flagCaught('urgency')">hoạt động bất thường trên tài khoản của bạn. Nếu không xác minh trong <b>24 giờ</b>, tài khoản sẽ bị khóa vĩnh viễn.</span></p><br>
+        <p>Vui lòng nhấp vào liên kết dưới để xác minh ngay:</p><br>
+        <p>👉 <span class="suspicious" onclick="flagCaught('link')">http://vietcombank-xacminh.xyz/login?ref=alert&utm=phish</span></p><br>
+        <p>Trân trọng,<br><span class="suspicious" onclick="flagCaught('signature')">Bộ Phận Bảo Mật Vietcombank<br>Tel: 1800-XXXX | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7f0c0a0f0f100d0b3f09161a0b1c10121d1e1114521e131a0d0b51111a0b">[email&#160;protected]</a></span></p>
+      </div>
+    </div>
+    <div style="margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap;">
+      <button class="btn btn-success btn-sm" onclick="handleAction('report')">🚨 Báo Cáo Phishing</button>
+      <button class="btn btn-danger btn-sm" onclick="handleAction('click_link')">😬 Nhấp Vào Liên Kết</button>
+      <button class="btn btn-warning btn-sm" onclick="handleAction('ignore')">🗑️ Xóa Email</button>
+      <button class="btn btn-outline btn-sm" onclick="revealAllFlags()">💡 Hiện Tất Cả Dấu Hiệu</button>
+    </div>
+    <div id="email-flags-caught" style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px;"></div>
+  </div>
+
+  <!-- Scenario: SMS -->
+  <div id="scenario-sms" style="display: none;">
+    <div class="alert alert-info">📱 <strong>Tình huống:</strong> Bạn nhận được SMS này trên điện thoại. Bạn sẽ làm gì?</div>
+    <div class="card" style="max-width: 380px; background: #0f0f1f;">
+      <div style="text-align: center; font-size: 12px; color: var(--text-muted); margin-bottom: 12px; font-family: var(--mono);">SMS — Thứ 6, 23/05 09:30</div>
+      <div class="sms-bubble incoming">
+        🏦 <strong>Vietcombank:</strong> Tai khoan cua ban bi truy cap la. Xac nhan ngay tai: <span style="color: #60a5fa; text-decoration: underline; cursor: pointer;" onclick="handleSmsAction('click')">http://vcb-xacnhan.tk/login</span> hoac tai khoan se bi khoa trong 2h. - <span class="suspicious">Ma xac nhan: 583921</span>
+        <div class="sms-time">09:30</div>
+      </div>
+    </div>
+    <div style="margin-top: 16px;">
+      <div class="card-title" style="color: var(--text-muted); font-size: 12px; margin-bottom: 12px;">🔍 PHÂN TÍCH DẤU HIỆU ĐỎ</div>
+      <div id="sms-analysis" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div class="card" style="padding: 14px; cursor: pointer; border-color: rgba(248,113,113,0.2);" onclick="revealSmsFlag(0)">
+          <div style="font-size: 20px; margin-bottom: 8px;">🔗</div>
+          <div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;">Domain đáng ngờ</div>
+          <div id="sms-flag-0" style="font-size: 12px; color: var(--text-muted);">Nhấp để phân tích...</div>
+        </div>
+        <div class="card" style="padding: 14px; cursor: pointer; border-color: rgba(251,191,36,0.2);" onclick="revealSmsFlag(1)">
+          <div style="font-size: 20px; margin-bottom: 8px;">⏰</div>
+          <div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;">Tạo áp lực thời gian</div>
+          <div id="sms-flag-1" style="font-size: 12px; color: var(--text-muted);">Nhấp để phân tích...</div>
+        </div>
+        <div class="card" style="padding: 14px; cursor: pointer; border-color: rgba(167,139,250,0.2);" onclick="revealSmsFlag(2)">
+          <div style="font-size: 20px; margin-bottom: 8px;">✍️</div>
+          <div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;">Lỗi chính tả</div>
+          <div id="sms-flag-2" style="font-size: 12px; color: var(--text-muted);">Nhấp để phân tích...</div>
+        </div>
+        <div class="card" style="padding: 14px; cursor: pointer; border-color: rgba(99,210,190,0.2);" onclick="revealSmsFlag(3)">
+          <div style="font-size: 20px; margin-bottom: 8px;">📞</div>
+          <div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;">Số lạ gửi</div>
+          <div id="sms-flag-3" style="font-size: 12px; color: var(--text-muted);">Nhấp để phân tích...</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 16px; display: flex; gap: 12px;">
+      <button class="btn btn-success btn-sm" onclick="handleSmsAction('block')">🚫 Chặn & Xóa</button>
+      <button class="btn btn-danger btn-sm" onclick="handleSmsAction('click')">😬 Nhấp Link</button>
+      <button class="btn btn-warning btn-sm" onclick="handleSmsAction('call')">📞 Gọi Xác Nhận NH</button>
+    </div>
+  </div>
+
+  <!-- Scenario: Fake Login -->
+  <div id="scenario-login" style="display: none;">
+    <div class="alert alert-info">🌐 <strong>Tình huống:</strong> Bạn nhấp link và thấy trang này. Đây có phải trang thật không?</div>
+    <div class="grid-2">
+      <div>
+        <div class="fake-browser">
+          <div class="fake-url-bar">
+            <div class="lock-icon">⚠️</div>
+            <div class="url-text">http://<span style="color: var(--accent2);">facebook-login-secure.com</span>/login.php</div>
+            <div style="font-size: 11px; color: var(--text-muted);">Not Secure</div>
+          </div>
+          <div class="fake-form" style="background: #fff;">
+            <div style="text-align: center; margin-bottom: 24px;">
+              <div style="font-size: 36px; font-weight: 900; color: #1877f2; letter-spacing: -2px;">facebook</div>
+              <div style="font-size: 14px; color: #606770; margin-top: 4px;">Đăng nhập để kết nối với bạn bè</div>
+            </div>
+            <input type="text" class="login-input" id="fake-email-input" placeholder="Email hoặc số điện thoại" oninput="checkFakeLogin()">
+            <input type="password" class="login-input" id="fake-pass-input" placeholder="Mật khẩu" oninput="checkFakeLogin()">
+            <button class="login-btn" onclick="handleFakeLogin()">Đăng nhập</button>
+            <div style="text-align: center; margin-top: 12px; font-size: 13px;">
+              <a href="#" style="color: #1877f2; text-decoration: none;" onclick="handleFakeLogin()">Quên mật khẩu?</a>
+            </div>
+            <hr style="margin: 16px 0; border: none; border-top: 1px solid #e4e6eb;">
+            <div style="text-align: center;">
+              <button style="background: #42b72a; border: none; border-radius: 8px; padding: 10px 20px; color: #fff; font-size: 14px; cursor: pointer;" onclick="handleFakeLogin()">Tạo tài khoản mới</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card-title" style="margin-bottom: 16px;">🔍 Kiểm Tra Trang Web</div>
+        <div id="login-checks">
+          <div class="card" style="padding: 14px; margin-bottom: 12px; border-color: rgba(248,113,113,0.3);">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="font-size: 20px;">🔒</div>
+              <div>
+                <div style="font-size: 13px; font-weight: 600; color: var(--accent2);">Không có HTTPS</div>
+                <div style="font-size: 12px; color: var(--text-muted);">Kết nối không được mã hóa. Dữ liệu bạn nhập có thể bị chặn.</div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="padding: 14px; margin-bottom: 12px; border-color: rgba(248,113,113,0.3);">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="font-size: 20px;">🌐</div>
+              <div>
+                <div style="font-size: 13px; font-weight: 600; color: var(--accent2);">Domain giả mạo</div>
+                <div style="font-size: 12px; color: var(--text-muted);"><code>facebook-login-secure.com</code> ≠ <code>facebook.com</code></div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="padding: 14px; margin-bottom: 12px; border-color: rgba(248,113,113,0.3);">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="font-size: 20px;">📍</div>
+              <div>
+                <div style="font-size: 13px; font-weight: 600; color: var(--accent2);">URL chứa .php lạ</div>
+                <div style="font-size: 12px; color: var(--text-muted);">Facebook không dùng /login.php — dấu hiệu của trang clone thủ công.</div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="padding: 14px; margin-bottom: 12px; border-color: rgba(251,191,36,0.3);">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="font-size: 20px;">🎨</div>
+              <div>
+                <div style="font-size: 13px; font-weight: 600; color: var(--accent3);">Thiết kế gần giống thật</div>
+                <div style="font-size: 12px; color: var(--text-muted);">Kẻ tấn công sao chép HTML/CSS để đánh lừa. Luôn kiểm tra URL!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-success btn-sm" onclick="handleLoginAction('leave')"> Thoát Trang</button>
+        <button class="btn btn-danger btn-sm" style="margin-left: 8px;" onclick="handleFakeLogin()"> Đăng Nhập</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Phishing Overlay -->
+<div class="overlay" id="phishing-overlay">
+  <div class="overlay-box">
+    <div style="font-size: 28px; margin-bottom: 8px;" id="overlay-icon">⚠️</div>
+    <div style="font-size: 20px; font-weight: 700; margin-bottom: 8px;" id="overlay-title">Bạn đã bị lừa!</div>
+    <div style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;" id="overlay-desc"></div>
+    <div id="overlay-flags" class="redflags"></div>
+    <div style="margin-top: 24px; display: flex; gap: 12px;">
+      <button class="btn" onclick="closeOverlay()" style="flex: 1;">📚 Học Từ Lỗi Này</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ TAB: PASSWORD ══════════════════ -->
+<div class="content" id="tab-password">
+  <div class="section-header">
+    <div class="section-title">🔐 Password Security Analyzer</div>
+    <div class="section-desc">Phân tích độ mạnh mật khẩu dựa trên entropy, kiểm tra pattern nguy hiểm và mô phỏng kiểm tra cơ sở dữ liệu rò rỉ.</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">✏️ Nhập Mật Khẩu Để Phân Tích</div>
+      <div class="input-group">
+        <label class="input-label">Mật khẩu (không được lưu hoặc gửi đi)</label>
+        <div style="position: relative;">
+          <input type="password" id="pwd-input" class="input-field" placeholder="Nhập mật khẩu..." oninput="analyzePassword()" style="padding-right: 48px;">
+          <button onclick="togglePwdShow()" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 16px;" id="pwd-eye">👁️</button>
+        </div>
+        <div class="strength-bar" style="margin-top: 8px;">
+          <div class="strength-seg" id="str-0"></div>
+          <div class="strength-seg" id="str-1"></div>
+          <div class="strength-seg" id="str-2"></div>
+          <div class="strength-seg" id="str-3"></div>
+          <div class="strength-seg" id="str-4"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 6px;">
+          <span style="font-size: 12px; color: var(--text-muted);" id="pwd-strength-label">—</span>
+          <span style="font-size: 12px; font-family: var(--mono);" id="pwd-entropy">Entropy: —</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="card-title">🎲 Gợi Ý Mật Khẩu Mạnh</div>
+      <div id="pwd-suggestions"></div>
+      <button class="btn btn-sm" onclick="generateStrongPassword()" style="margin-top: 12px;">⚡ Tạo Mật Khẩu Mạnh</button>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom: 16px;">
+        <div class="card-title">🔬 Phân Tích Chi Tiết</div>
+        <div id="pwd-analysis">
+          <div style="font-size: 13px; color: var(--text-muted); text-align: center; padding: 20px 0;">Nhập mật khẩu để xem phân tích</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">💥 Ước Tính Thời Gian Crack</div>
+        <div id="crack-times">
+          <div style="font-size: 13px; color: var(--text-muted); text-align: center; padding: 20px 0;">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🚫 Kiểm Tra Cơ Sở Dữ Liệu Rò Rỉ (Mô Phỏng)</div>
+    <div class="alert alert-info" style="margin-bottom: 16px;">
+      💡 Trong thực tế, <strong>HaveIBeenPwned</strong> cho phép kiểm tra mật khẩu thông qua k-anonymity model — gửi 5 ký tự đầu của SHA-1 hash, không bao giờ gửi mật khẩu gốc.
+    </div>
+    <div id="breach-check-result">
+      <div style="font-size: 13px; color: var(--text-muted);">Nhập mật khẩu ở trên để kiểm tra...</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📋 Các Mật Khẩu Phổ Biến Nhất — TUYỆT ĐỐI KHÔNG DÙNG</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <span class="chip chip-danger">123456</span>
+      <span class="chip chip-danger">password</span>
+      <span class="chip chip-danger">123456789</span>
+      <span class="chip chip-danger">qwerty</span>
+      <span class="chip chip-danger">abc123</span>
+      <span class="chip chip-danger">111111</span>
+      <span class="chip chip-danger">iloveyou</span>
+      <span class="chip chip-danger">admin</span>
+      <span class="chip chip-danger">letmein</span>
+      <span class="chip chip-danger">welcome</span>
+      <span class="chip chip-danger">monkey</span>
+      <span class="chip chip-danger">dragon</span>
+      <span class="chip chip-danger">123123</span>
+      <span class="chip chip-danger">master</span>
+      <span class="chip chip-danger">hello</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ TAB: RSA ══════════════════ -->
+<div class="content" id="tab-rsa">
+  <div class="section-header">
+    <div class="section-title">🔢 RSA Cryptography — Demo Trực Tiếp</div>
+    <div class="section-desc">Minh họa thuật toán RSA từ Bài Thực Hành Số 16. Xem toàn bộ quá trình sinh khóa, mã hóa và giải mã ngay trong trình duyệt.</div>
+  </div>
+
+  <div class="alert alert-info">
+    📖 <strong>Kết nối tài liệu:</strong> Demo này thực hiện đúng quy trình được mô tả trong Hình 2 — Sơ đồ biểu diễn thuật toán mã hóa RSA: Chọn p,q → Tính n=pq → Tính φ(n) → Chọn e → Tính d → Khóa công khai (n,e) / Khóa bí mật (n,d) → Mã hóa → Giải mã.
+  </div>
+
+  <div class="grid-2" style="margin-bottom: 20px;">
+    <div class="card">
+      <div class="card-title">⚙️ Tham Số Sinh Khóa</div>
+      <div class="input-group">
+        <label class="input-label">Số nguyên tố p (nhỏ để demo)</label>
+        <input type="number" id="rsa-p" class="input-field" value="61" min="2">
+      </div>
+      <div class="input-group">
+        <label class="input-label">Số nguyên tố q</label>
+        <input type="number" id="rsa-q" class="input-field" value="53" min="2">
+      </div>
+      <button class="btn" onclick="generateRSAKeys()" style="width: 100%; margin-bottom: 10px;">🔑 Sinh Khóa RSA</button>
+      <button class="btn btn-outline btn-sm" onclick="pickRandomPrimes()" style="width: 100%;">🎲 Chọn Ngẫu Nhiên</button>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🔑 Kết Quả Tạo Khóa</div>
+      <div id="rsa-key-result">
+        <div style="font-size: 13px; color: var(--text-muted); text-align: center; padding: 20px 0;">Bấm "Sinh Khóa RSA" để bắt đầu</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="rsa-key-steps" style="display: none;">
+    <div class="card">
+      <div class="card-title">📋 Từng Bước Sinh Khóa</div>
+      <div id="rsa-steps-content"></div>
+    </div>
+  </div>
+
+  <div class="card" id="rsa-encrypt-card" style="display: none;">
+    <div class="card-title">🔒 Mã Hóa / Giải Mã</div>
+    <div class="grid-2">
+      <div>
+        <div class="input-group">
+          <label class="input-label">Thông điệp (chữ hoặc số ≤ n)</label>
+          <input type="text" id="rsa-message" class="input-field" placeholder="Nhập tin nhắn..." value="Hello RSA">
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn" onclick="rsaEncrypt()" style="flex: 1;">🔒 Mã Hóa</button>
+          <button class="btn btn-success" onclick="rsaDecrypt()" style="flex: 1;">🔓 Giải Mã</button>
+        </div>
+      </div>
+      <div>
+        <div class="input-group">
+          <label class="input-label">Kết quả mã hóa C = M^e mod n</label>
+          <textarea id="rsa-cipher" class="input-field" rows="3" readonly placeholder="Bản mã sẽ hiển thị ở đây..."></textarea>
+        </div>
+        <div class="input-group">
+          <label class="input-label">Kết quả giải mã M = C^d mod n</label>
+          <input type="text" id="rsa-decrypted" class="input-field" readonly placeholder="Bản rõ...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">💡 Tại Sao RSA Bảo Mật? — Kết Nối Với An Toàn Thông Tin</div>
+    <div class="grid-2" style="margin-top: 8px;">
+      <div class="rsa-step">
+        <div class="rsa-step-num">Điểm mạnh</div>
+        <div class="rsa-step-title">🏔️ Bài Toán Phân Tích Thừa Số</div>
+        <div class="rsa-step-desc">Biết n = p × q nhưng tìm ngược lại p và q từ n là bài toán cực kỳ khó với số lớn 2048-bit. Đây là nền tảng bảo mật của RSA.</div>
+        <div class="rsa-formula">n = p × q (dễ tính) | p,q ← n (cực khó)</div>
+      </div>
+      <div class="rsa-step">
+        <div class="rsa-step-num">Ứng dụng thực tế</div>
+        <div class="rsa-step-title">🌐 HTTPS & TLS</div>
+        <div class="rsa-step-desc">Khi bạn truy cập https://facebook.com thực sự, RSA được dùng để trao đổi khóa. Trang phishing thiếu chứng chỉ TLS hợp lệ — đây là dấu hiệu đầu tiên cần kiểm tra!</div>
+        <div class="rsa-formula">C = M^e mod n | M = C^d mod n</div>
+      </div>
+      <div class="rsa-step">
+        <div class="rsa-step-num">Từ bài thực hành</div>
+        <div class="rsa-step-title">📝 Phi Hàm Euler φ(n)</div>
+        <div class="rsa-step-desc">φ(n) = (p-1)(q-1) — dùng để tính khóa bí mật d. Giá trị này được giữ bí mật hoàn toàn. Nếu lộ p hoặc q, toàn bộ hệ thống bị phá vỡ.</div>
+        <div class="rsa-formula">φ(n) = (p-1)(q-1) | d × e ≡ 1 (mod φ(n))</div>
+      </div>
+      <div class="rsa-step">
+        <div class="rsa-step-num">Thực tiễn bảo mật</div>
+        <div class="rsa-step-title">🔢 Kích Thước Khóa</div>
+        <div class="rsa-step-desc">Demo dùng số nhỏ để minh họa. Thực tế cần p, q ít nhất 1024-bit mỗi cái (n = 2048-bit) để đảm bảo an toàn trước các cuộc tấn công hiện đại.</div>
+        <div class="rsa-formula">e = 65537 (thường dùng) | n ≥ 2048 bit</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
