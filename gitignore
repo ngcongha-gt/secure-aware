@@ -1,0 +1,48 @@
+# ── Hệ điều hành ──────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── Editor & IDE ───────────────────────────────────
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# JetBrains (WebStorm, IntelliJ...)
+.idea/
+*.iml
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+
+# ── Môi trường phát triển ──────────────────────────
+# Node (nếu dùng live-server)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# ── Logs & debug ───────────────────────────────────
+*.log
+logs/
+
+# ── File tạm và build ──────────────────────────────
+dist/
+build/
+.cache/
+*.tmp
+*.temp
+
+# ── Môi trường cục bộ ──────────────────────────────
+.env
+.env.local
+.env.*.local
