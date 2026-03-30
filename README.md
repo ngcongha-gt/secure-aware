@@ -78,14 +78,6 @@ python -m http.server 5500
 # Truy cập: http://localhost:5500
 ```
 
-### Cách 3 — Deploy lên GitHub Pages
-
-1. Vào repo → **Settings** → **Pages**
-2. Source: chọn branch `main`, thư mục `/ (root)`
-3. Lưu → truy cập `https://<username>.github.io/secureaware`
-
----
-
 ##  Cấu trúc dự án
 
 ```
