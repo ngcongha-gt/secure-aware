@@ -239,8 +239,8 @@ git push origin feature/ten-tinh-nang
 
 ##  Tác giả
 
-**[Nguyễn Công Hà]**
-- GitHub: [@ngcongha-gt](https://github.com/ngcongha-gt)
+**Nguyễn Công Hà**
+- GitHub: @ngcongha-gt (https://github.com/ngcongha-gt)
 - Email: hia447623@gmail.com
 
 ---
